@@ -4,9 +4,9 @@ API em FastAPI para monitorar um modelo em produção.
 
 
 A API possui dois endpoints principais:
-- performance e volumetria mensal do lote recebido
+- Performance e volumetria mensal do lote recebido
 
-- aderência via teste Kolmogorov–Smirnov entre os scores do lote e a base de teste
+- Aderência via teste Kolmogorov–Smirnov entre os scores do lote e a base de teste
 
 ## Estrutura do repositório
 ```
@@ -35,7 +35,7 @@ README.md
 testes.ipynb # notebook testando endpoints da API e respondendo perguntas do desafio
 ```
 
-Observação: se seu clone veio com caminhos ligeiramente diferentes, ajuste os paths indicados.
+Observação: Se seu clone veio com caminhos ligeiramente diferentes, ajuste os paths indicados.
 
 ## Pré-requisitos:
 - Python 3.10
@@ -54,10 +54,12 @@ conda activate monitoring
 
 Na raiz do repositório:
 
-
+```
 pip install -r monitoring/requirements.txt
+```
 
 Se necessário, garanta estes pacotes mínimos instalados:
+
 - scikit-learn == 1.0.2
 
 - fastapi==0.70.0
@@ -87,8 +89,8 @@ A API ficará disponível em:
 
 http://localhost:8001
 
-## executando o notebook de testes
-- no arquivo _testes.ipynb_ clique no botaõ de "run all" e verá minhas respostas as perguntas e os endpoints funcionando.
+## Executando o notebook de testes
+- No arquivo _testes.ipynb_ clique no botaõ de "run all" e verá minhas respostas as perguntas e os endpoints funcionando.
 
 ## Meu processo e feedback
 - Dediquei mais tempo à compreensão dos requisitos, já que fazia algum tempo que desenvolvia uma API (minha experiência é maior em consumir APIs). O início exigiu mais atenção para estruturar a arquitetura e adaptar o código já disponibilizado.
