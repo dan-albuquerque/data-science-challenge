@@ -88,11 +88,15 @@ A API ficará disponível em:
 http://localhost:8001
 
 ## executando o notebook de testes
-- no arquivo testes.ipynb clique no botaõ de "run all" e verá minhas respostas as perguntas e os endpoints funcionando.
+- no arquivo _testes.ipynb_ clique no botaõ de "run all" e verá minhas respostas as perguntas e os endpoints funcionando.
 
 ## Meu processo e feedback
-- Dediquei mais tempo à compreensão dos requisitos, já que fazia algum tempo que não desenvolvia uma API (minha experiência é maior em consumir APIs). O início exigiu mais atenção para estruturar a arquitetura e adaptar o código já disponibilizado.
-- Houve certa negligência da minha parte em relação a versões e dependências. Enfrentei dificuldades para rodar o código com a versão 1.0.2 do scikit-learn, o que demandou ajustes e consumiu tempo adicional.
-- Após superar essas etapas mais burocráticas, consegui organizar o código, seguindo os requisitos e o passo a passo do desafio. Essa foi a parte mais tranquila da implementação.
-- Gostei desse desafio pois ampliou minha visão sobre como modelos de machine learning são monitorados em produção. Questões como tempo, volumetria e controle de uso me fizeram refletir sobre aspectos que até então não faziam parte do meu foco, já que estive mais voltado ao desenvolvimento dos modelos em si. :)
-- Como sugestão de melhoria, acredito que o repositório do desafio poderia estar mais enxuto. Algumas pastas não são destinadas a esta etapa, e embora entenda que possam ser aproveitadas em desafios futuros, a presença delas pode causar certa confusão inicial.
+- Dediquei mais tempo à compreensão dos requisitos, já que fazia algum tempo que desenvolvia uma API (minha experiência é maior em consumir APIs). O início exigiu mais atenção para estruturar a arquitetura e adaptar o código já disponibilizado.
+- Houve certa negligência da minha parte em relação a versões e dependências. Enfrentei dificuldades para executar o código com a versão 1.0.2 do scikit-learn, o que demandou ajustes e consumiu tempo adicional.
+- Após superar essas etapas mais burocráticas, consegui organizar o código seguindo os requisitos e o passo a passo do desafio. Essa foi a parte mais tranquila da implementação.
+- Gostei desse desafio, pois ampliou minha visão sobre como modelos de machine learning são monitorados em produção. Questões como volumetria e controle de uso me fizeram refletir sobre aspectos que até então não faziam parte do meu foco, já que estive mais voltado ao desenvolvimento dos modelos em si. :)
+- Como sugestão de melhoria, acredito que o repositório do desafio poderia estar mais enxuto. Algumas pastas não são destinadas a esta etapa e, embora entenda que possam ser aproveitadas em desafios futuros, a presença delas pode causar certa confusão inicial.
+
+## Observações sobre parte extra
+- Comecei a desenvolver outro modelo de classificação usando RandomForest, porém por questão de tempo do deadline não consegui exportá-lo para a API, mas o desenvolvimento dele está no _dev_model.ipynb_ todo o passo a passo de tratamento e validação do modelo
+- O modelo que desenvolvi com base nos dados de treino na pasta de credito atingiu uma área sob a curva ROC com pouco mais de 80%, sendo maior que o do modelo do desafio, além de uma acurácia de 92%.

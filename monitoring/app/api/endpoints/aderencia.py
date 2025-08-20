@@ -10,6 +10,9 @@ router = APIRouter(prefix="/aderencia")
 with open("monitoring/model.pkl", "rb") as f:
     model = pickle.load(f)
 
+# with open("monitoring/my_model.pkl", "rb") as f:
+#     my_model = pickle.load(f)
+
 @router.post("/")
 async def evaluate_aderencia(request: Request):
     try:
@@ -37,17 +40,22 @@ async def evaluate_aderencia(request: Request):
         df_new = df_new.reindex(columns=cols_model, fill_value=np.nan)
 
         # gera scores
-        print('gerando os scores')
-        scores_new = model.predict_proba(df_new)[:, 1]
-        print('gerando os scores de teste')
+
+        scores_new = model.predict_proba(df_new)[:, 1] # retornando a chance de ser a classe 1
         scores_test = model.predict_proba(df_test.drop(columns=["TARGET"], errors="ignore"))[:, 1]
 
-        print('calculando ks')
+        # scores com o novo modelo
+        # my_model_scores_new = my_model.predict_proba(df_new)[:, 1]
+        # my_model_scores_test = my_model.predict_proba(df_test.drop(columns=["TARGET"], errors="ignore"))[:, 1]
+
         ks_stat, p_value = ks_2samp(scores_new, scores_test)
+        # my_model_ks_stat, my_model_p_value = ks_2samp(my_model_scores_new, my_model_scores_test)
 
         return {
             "ks_statistic": float(ks_stat),
-            "p_value": float(p_value)
+            "p_value": float(p_value),
+            # "my_model_ks_statistic": float(my_model_ks_stat),
+            # "my_model_p_value": float(my_model_p_value)
         }
 
     except Exception as e:
