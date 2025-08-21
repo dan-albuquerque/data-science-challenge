@@ -97,7 +97,6 @@ http://localhost:8001
 - Houve certa negligência da minha parte em relação a versões e dependências. Enfrentei dificuldades para executar o código com a versão 1.0.2 do scikit-learn, o que demandou ajustes e consumiu tempo adicional.
 - Após superar essas etapas mais burocráticas, consegui organizar o código seguindo os requisitos e o passo a passo do desafio. Essa foi a parte mais tranquila da implementação.
 - Gostei desse desafio, pois ampliou minha visão sobre como modelos de machine learning são monitorados em produção. Questões como volumetria e controle de uso me fizeram refletir sobre aspectos que até então não faziam parte do meu foco, já que estive mais voltado ao desenvolvimento dos modelos em si. :)
-- Como sugestão de melhoria, acredito que o repositório do desafio poderia estar mais enxuto. Algumas pastas não são destinadas a esta etapa e, embora entenda que possam ser aproveitadas em desafios futuros, a presença delas pode causar certa confusão inicial.
 
 ## Observações sobre parte extra
 - Comecei a desenvolver outro modelo de classificação usando RandomForest, porém por questão de tempo do deadline não consegui exportá-lo para a API, mas o desenvolvimento dele está no _dev_model.ipynb_ todo o passo a passo de tratamento e validação do modelo
